@@ -23,8 +23,6 @@
 [Recording Link](https://tinyurl.com/3h6t3rzj)
 
 > Day-03 2022-11-26
-[Recording Link]()
-
 * Scrum has Four Events
   1. Sprint Planing Meeting
   2. Daily Scrum Meeting
@@ -53,4 +51,7 @@
   * Everyday max time 15min.
   * Entire team Must join every 24 Hours exclude holidays.
   * During the middle of the sprint changes are allowed but that should be alined to sprint goal. It should not deviating from sprint goal
-  *   
+
+**Sprint Retrospective Meeting**
+  * Entire scrum Dev team collaborates to discuss what went well in the sprint , what went wrong in the last sprint , what could be improved in upcoming sprints.  
+[Recording Link]()
