@@ -17,10 +17,10 @@
 ### Agile
   * Agile logically comes under Incremental & Iterative Approch.
 
-[Recording Link](https://tinyurl.com/2pbwp687)
+* Day-01 [Recording Link](https://tinyurl.com/2pbwp687)
 
 > Day-02 2022-11-25
-[Recording Link](https://tinyurl.com/3h6t3rzj)
+* Day-02 [Recording Link](https://tinyurl.com/3h6t3rzj)
 
 > Day-03 2022-11-26
 * Scrum has Four Events
@@ -54,4 +54,4 @@
 
 **Sprint Retrospective Meeting**
   * Entire scrum Dev team collaborates to discuss what went well in the sprint , what went wrong in the last sprint , what could be improved in upcoming sprints.  
-[Recording Link]()
+* Day-03 [Recording Link]()
