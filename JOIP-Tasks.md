@@ -11,7 +11,7 @@ Docker
   6. Remove all Exited Containers
   7. Remove all Un-Used Images
   8. Run the Docker Pull
-  9. Create Container with Interactivemode and Run PS Command Container
+  9. Create Container with Interactivemode and Run PS Command Inside the Container
   10. Create Container and Install Nginx
-  11. Create nginx Image Without Writting Dockerfile
+  11. Create Nginx Image Without Writting Dockerfile
   12. Open Cheatsheet and Practice all Docker Commands
