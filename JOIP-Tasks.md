@@ -41,8 +41,7 @@ CICD
   3. Write Diclarative Pipeline for sending Artifactory into JFrog.
   4. Install Sonarqube & Configure to Jenkins.
   5. Write Declarative Pipeline for SpringPetClinic/GameofLife/Shopizer/OpenMRS Using Sonarqube.
-Terraform
----------
+## Terraform
 > 2022-10-28
 1. Create an aws ec2 with cli configured & Create an AMI of that with Packer.
 2. Node --> Workspace --> /home/ubuntu/ntier --> Manually Terraform init
