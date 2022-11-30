@@ -33,7 +33,6 @@
   * Final day of the sprint scrum devlopment team give demo to customer, Stakeholders, End Users.
   * An Oppertunity to get the feedback on previously relesed features to live
   * Scrum Dev and Client Discuss What next?,What is client Mind?What are the pain points of the end user.
-  * It's Completed in 45 mins
       
 **Scrum has Three Pillers**
   1. Transparency : 
@@ -46,7 +45,7 @@
 
 **Scrum Meeting**
   * This is opportunity for scrum team to meet "As One Team Mindset" to understand ehat everyone is doing to achive sprint goal. So we can avoid other unnecessary meeting in the project.
-  * to discuss Impediments and blockers.
+  * To discuss Impediments and blockers.
   * Daily Scrum is not a status meeting or not a Dought clarifing meeting.
   * Everyday max time 15min.
   * Entire team Must join every 24 Hours exclude holidays.
