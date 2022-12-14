@@ -1,7 +1,7 @@
 # Kubernetes Setup
   * Master must be linux machine. Nodes can be anything.
   * Installing Container runtime. Our choise is Docker.(on Both Master & Nodes)
-   ```
+    ```
     curl -fsSL https://get.docker.com -o get-docker.sh
     sh get-docker.sh
     ```
