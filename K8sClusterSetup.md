@@ -5,7 +5,7 @@
     curl -fsSL https://get.docker.com -o get-docker.sh
     sh get-docker.sh
     ```
-# Installing cri-dockerd
+## Installing cri-dockerd
   * to run cri-dockerd machine need go & git. Check in your machine if they don't present install them (on Both Master & Nodes)
     * to install git (for ubuntu)  
        ```
@@ -61,7 +61,7 @@
       sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
       sudo chown $(id -u):$(id -g) $HOME/.kube/config
       ```
-# Joining node to the cluster
+### Joining node to the cluster
   * we are including cri-socket to node
     ```
     <node cluster joining command> --cri-socket=unix:///var/run/cri-dockerd.sock
