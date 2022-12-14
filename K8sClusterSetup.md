@@ -66,3 +66,5 @@
     ```
     <node cluster joining command> --cri-socket=unix:///var/run/cri-dockerd.sock
     ``` 
+
+* Use Docker Cheat Sheet [Refer Here](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
