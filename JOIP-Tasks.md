@@ -99,3 +99,81 @@ out the Option?
   11. Create Nginx Image Without Writting Dockerfile
   12. Open Cheatsheet and Practice all Docker Commands
 ![PreView](img20221130115350.jpg)
+
+> 2022-12-04
+JOIP TEAM (TULSA)
+* G VENKATESH - 8247026216 - gudapativenkatesh4@gmail.com
+* BHAVANI J   - 8919262313
+* N SURESH    - 9133090022
+* KRISHNA REDDY - 7036995218
+* UDAY KIRAN - 9160014814
+* N KANNAN - 8328235343
+* B SARITHA - 9666358640
+* SK MOIN - 9985906723 
+* KASIM - 
+* NAGESWARARAO
+
+> 2022-12-06
+* Docker
+Inspect Image History
+---------------------
+* Hint: Use Docker History Command
+* Pull any Image of your Choise
+
+Docker Container
+----------------
+* Create a Hello-World Container 
+* Create A Nginx Container
+* Demonstrate why the Hello-World Container is in Stopped State and Nginx Container is still Running
+* Demonstrate Docker Container Life Cycle :
+  * create whet
+  
+
+## Instruct ELSA to find factors of 30
+1. Hello ELSA
+2. Help me to find out the factors of 30
+3. start with number 1 and find out 30 is divisible by 1.
+4. if the remainder is 0 add that number to list.
+5. if the remainder is not 0 don't add the number to the list. 
+6. repeat step 4 and 5 with numbers 1 to 29.  
+## Instruct ELSA to find 39 is prime or not
+1. start = 2
+2. number = 39
+3. remainder = number % start
+4. if remainder != 0
+5. repeat this until start =< number/2 
+6. print(prime) 
+## instruct elsa to print fibonnaci serires till 100
+
+number = 0
+start = 1
+sum = 0
+until [[ number -eq 100 ]] 
+number += ppp  1
+
+> 2022-12-07
+* Docker
+  *  Create ant container mysql or nginx or jenkins
+    * check the container is in running state or not
+    * pause the container 
+    * unpause the container  
+    * stop the container 
+    * start the container 
+    * terminate the container
+  * create an alpine container with name serv01 & ubuntu:22.04 with serv02
+    * ensure sleep 1d is passed as argument
+    * try running exec command without it to print the contents of the root container
+    * try executing command in interactive mode and install apache server
+  * create the jenkins/jenkins in detached mode & now attach to view the logs
+  * find the location of logs for the container on the docker hosts
+* Dockerfile
+  * create the docker image using dockerfile with alpine as base and git installed in it
+    * make a not of layers of alpine & the layers of the image created by you
+  * try to write dockerfile instruction       
+
+##  Palendrome
+* take a number 
+* devide it with 10 and note down the remainder as reverse and Quotient as number
+* then repeat this and multiply previous reverse with 10 and add present reverse to it
+* repeat this process until Quotient as 0
+number = input("enter a number")
