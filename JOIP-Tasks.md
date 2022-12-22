@@ -177,3 +177,7 @@ number += ppp  1
 * then repeat this and multiply previous reverse with 10 and add present reverse to it
 * repeat this process until Quotient as 0
 number = input("enter a number")
+
+> 2022-12-17
+**K8s**
+* Create Nginx,Tomcat,Httpd & SoringPetClinic Containers.

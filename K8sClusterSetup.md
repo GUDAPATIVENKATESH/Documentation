@@ -1,4 +1,4 @@
-# Kubernetes Setup
+# Kubernetes Setup by VENKATESH GUDAPATI
   * Master must be linux machine. Nodes can be anything.
   * Installing Container runtime. Our choise is Docker.(on Both Master & Nodes)
     ```
@@ -45,7 +45,7 @@
       sudo apt-get install -y kubelet=1.25.5-00 kubeadm=1.25.5-00 kubectl=1.25.5-00
       sudo apt-mark hold kubelet kubeadm kubectl
       ```  
-    * to install kube-falannel as a root user
+    * to install kube-flannel as a root user
       ```
       kubectl apply -f https://raw.githubusercontent.com/flannel-io/flannel/master/Documentation/kube-flannel.yml
       ```
