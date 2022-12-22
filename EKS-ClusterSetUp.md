@@ -22,19 +22,31 @@
 
   * here we are provisioning AWSEKS with Terraform for official document [Refer here](https://developer.hashicorp.com/terraform/tutorials/kubernetes/eks)  
   * to set up the provisioning we need Terraform to be installed for official document [Refer here](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
-   ```
-    sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
+    ```
+     cd ~/bin or cd /home/ubuntu/bin based on user
+     sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
     
-    wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+     wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
     
-    gpg --no-default-keyring --keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg --fingerprint
+     gpg --no-default-keyring --keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg --fingerprint
     
-    echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
-    https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
-    sudo tee /etc/apt/sources.list.d/hashicorp.list
+     echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
+     https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
+     sudo tee /etc/apt/sources.list.d/hashicorp.list
     
-    sudo apt update
-    sudo apt-get install terraform -y
-    terraform --version
+     sudo apt update
+     sudo apt-get install terraform -y
+     terraform --version
 
-   ```
+    ```
+  * Clone Terraform EKS cluster Template for official document [Refer here](https://developer.hashicorp.com/terraform/tutorials/kubernetes/eks)
+    ```
+     git clone https://github.com/hashicorp/learn-terraform-provision-eks-cluster
+     cd learn-terraform-provision-eks-cluster/
+    ```
+  * If you want know the cluster details or modify, Just verify the cluster_version &    eks_managed_node_groups on eks-cluster.tf.
+  * to create the set up 
+    ```
+     teffaform init
+     terraform apply --auto-approve
+    ```
