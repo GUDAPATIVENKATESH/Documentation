@@ -23,7 +23,7 @@
   * here we are provisioning AWSEKS with Terraform for official document [Refer here](https://developer.hashicorp.com/terraform/tutorials/kubernetes/eks)  
   * to set up the provisioning we need Terraform to be installed for official document [Refer here](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
     ```
-     cd ~/bin or cd /home/ubuntu/bin based on user
+     cd ~/bin or cd /home/ubuntu/bin 
      sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
     
      wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
