@@ -47,7 +47,7 @@
   * If you want know the cluster details or modify, Just verify the cluster_version &    eks_managed_node_groups on eks-cluster.tf.
   * to create the set up 
     ```
-     teffaform init
+     terraform init
      terraform apply --auto-approve
      aws eks --region $(terraform output -raw region) update-kubeconfig \
      --name $(terraform output -raw cluster_name)
