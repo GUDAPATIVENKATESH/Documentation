@@ -19,7 +19,7 @@ EXPOSE 8080
 CMD ["java", "-jar", "/spring-petclinic-2.4.2.jar"]
 ```
 * Push the docker image into docker registory
-[PreView](spc3.png)
+![PreView](spc3.png)
 
 ```yaml
 ---
