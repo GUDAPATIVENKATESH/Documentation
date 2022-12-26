@@ -51,6 +51,8 @@ spec:
         ports: 
           - containerPort: 8080
             protocol: TCP
+        command:
+          - 0.0.0.0/8080
 
 ---
 #Service
