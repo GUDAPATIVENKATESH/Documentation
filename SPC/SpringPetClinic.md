@@ -1,4 +1,4 @@
-# SPRINGPETCLINIC
+# SPRINGPETCLINIC K8s Deployment
 * take vm with java-11 and maven installed
 * clone SPC source from git 
 * run maven build then it will create a jar file in target folder
