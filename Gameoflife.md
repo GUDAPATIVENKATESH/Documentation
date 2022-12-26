@@ -9,6 +9,7 @@
    CMD ["catalina.sh", "run"]
 ``` 
 * Then push the image into docker hub registory
+[PreView](gol3.png)
 * Now create a K8s deployment workload and service
 ```yaml
 ---

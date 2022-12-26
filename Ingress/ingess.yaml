@@ -1,0 +1,20 @@
+---
+#INGRESS
+apiVersion: v1
+kind: Ingress
+metadata: 
+  name: ing-gol-spc
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-healthcheck-path
+spec:
+  rules: 
+    - http:
+        paths: 
+          - path: /spc
+            backend: 
+              service:
+                name: petclinic
+                port:
+                  number: 35001
+            pathType: Exact
+  

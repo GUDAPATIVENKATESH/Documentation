@@ -18,6 +18,8 @@ ADD https://referenceapplicationskhaja.s3.us-west-2.amazonaws.com/spring-petclin
 EXPOSE 8080
 CMD ["java", "-jar", "/spring-petclinic-2.4.2.jar"]
 ```
+* Push the docker image into docker registory
+[PreView](spc3.png)
 
 ```yaml
 ---
