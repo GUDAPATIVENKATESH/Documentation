@@ -26,7 +26,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: petclinic
-  namespace: joip-task
+  label:
+    app: petclinic
 spec: 
   minReadySeconds: 9
   replicas: 2
@@ -34,16 +35,15 @@ spec:
     matchLabels:
       app: petclinic
   strategy:
+    type: RollingUpdate
     rollingUpdate: 
       maxSurge: 50%
       maxUnavailable: 50%
-    type: RollingUpdate
   template:
     metadata: 
       name: petclinic-temp
       labels: 
         app: petclinic
-      namespace: joip-task
   spec:
     containers: 
       - name: petclinic
@@ -60,7 +60,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: petclinic
-  namespace: joip-task
+  #namespace: joip-task
 spec:
   type: LoadBalancer
   selector:
@@ -71,3 +71,5 @@ spec:
       targetPort: 8080
       protocol: TCP
 ```
+![PreView](spc1.png)
+![PreView](spc2.png)
