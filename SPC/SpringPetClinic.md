@@ -18,14 +18,7 @@ ADD https://referenceapplicationskhaja.s3.us-west-2.amazonaws.com/spring-petclin
 EXPOSE 8080
 CMD ["java", "-jar", "/spring-petclinic-2.4.2.jar"]
 ```
-# GameOfLife
-```Dockerfile
-FROM tomcat:8-jdk8
-EXPOSE 8080
-ADD https://referenceapplicationskhaja.s3.us-west-2.amazonaws.com/gameoflife.war /usr/local/tomcat/webapps/gameoflife.war
-CMD ["catalina.sh", "run"]
 
-```
 ```yaml
 ---
 #Deployment
