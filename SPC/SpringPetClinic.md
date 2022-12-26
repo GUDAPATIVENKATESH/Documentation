@@ -1,13 +1,16 @@
-take vm with java-11 and maven installed
-clone SPC source from git 
-run maven build then it will create a jar file in target folder
-run the jar file
+# SPRINGPETCLINIC
+* take vm with java-11 and maven installed
+* clone SPC source from git 
+* run maven build then it will create a jar file in target folder
+* run the jar file
 ![PreView](download.png)
+```#!/bin/bash
 apt install openjdk-11-jdk maven git -y
 git clone https://github.com/GUDAPATIVENKATESH/spring-petclinic.git
 mvn package
 cd spring-petclinic/target/
 java -jar ./spring-petclinic-2.7.3.jar
+```
 # SpringPetClinic
 ```Dockerfile
 FROM amazoncorretto:11
