@@ -26,3 +26,53 @@ ADD https://referenceapplicationskhaja.s3.us-west-2.amazonaws.com/gameoflife.war
 CMD ["catalina.sh", "run"]
 
 ```
+```yaml
+---
+#Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: petclinic
+  namespace: joip-task
+spec: 
+  minReadySeconds: 9
+  replicas: 2
+  selector: 
+    matchLabels:
+      app: petclinic
+  strategy:
+    rollingUpdate: 
+      maxSurge: 50%
+      maxUnavailable: 50%
+    type: RollingUpdate
+  template:
+    metadata: 
+      name: petclinic-temp
+      labels: 
+        app: petclinic
+      namespace: joip-task
+  spec:
+    containers: 
+      - name: petclinic
+        image: venkateshg1234/spc:1.0
+        ports: 
+          - containerPort: 8080
+            protocol: TCP
+
+---
+#Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: petclinic
+  namespace: joip-task
+spec:
+  type: LoadBalancer
+  selector:
+    matchLabels:
+      app: petclinic
+  ports:
+    - port: 35001
+      targetPort: 8080
+      protocol: TCP
+```
