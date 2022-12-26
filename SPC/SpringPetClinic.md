@@ -11,7 +11,7 @@
      cd spring-petclinic/target/
      java -jar ./spring-petclinic-2.7.3.jar
      ```
-# SpringPetClinic Docker Image Building with MulyiStage Image Building Method
+# SpringPetClinic Docker Image Building with MultiStage Image Building Method
   ```Dockerfile
    FROM maven:3.8.6-amazoncorretto-11 as build
    RUN yum upgrade
