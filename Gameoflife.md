@@ -60,3 +60,5 @@ spec:
       targetPort: 8080
       protocol: TCP
 ```
+![PreView](gol1.png)
+![PreView](gol2.png)
