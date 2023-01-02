@@ -5,7 +5,7 @@ kind: Ingress
 metadata: 
   name: ing-gol-spc
   annotations:
-    service.beta.kubernetes.io/aws-load-balancer-healthcheck-path
+    kubernetes.io/ingress.class: alb
 spec:
   rules: 
     - http:

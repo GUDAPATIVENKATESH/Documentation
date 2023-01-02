@@ -1,0 +1,24 @@
+---
+Course: DevOps + AWS
+Duration in Days: 120
+Fee: 25000
+Online Class Facility: yes
+DecOps Topics: 
+  - Ansible
+  - DevSecOps
+  - CI/CD
+  - Terraform
+  - Microservices
+  - SRE
+AWS:
+  - EC2
+  - DataBase
+  - Storage
+  - Cloud:
+      - Operations
+      - Migration
+      - Formation
+  - Networking
+  - IAM
+
+
