@@ -1,0 +1,89 @@
+---
+- name: installing wildfly in ubuntu 20.04
+  hosts: all
+  become: yes
+  tasks: 
+    - name: installing default java
+      ansible.builtin.apt:
+        name: default-jdk
+        update_cache: true
+        state: present
+    - name: create a system account for wildfly group
+      ansible.builtin.group:
+        name: wildfly
+        system: true
+        state: present
+    - name: create a system account for wildfly user
+      ansible.builtin.user:
+        name: wildfly
+        group: wildfly
+        system: true
+        home: /opt/wildfly
+        shell: /sbin/nologin
+        state: present
+        create_home: true
+    - name: download wildfly tar file
+      ansible.builtin.get_url:
+        url: https://download.jboss.org/wildfly/22.0.1.Final/wildfly-22.0.1.Final.tar.gz
+        dest: /tmp
+        mode: '0440'
+    - name: untaring the tar file
+      ansible.builtin.unarchive:
+        src: /tmp/wildfly-22.0.1.Final.tar.gz
+        dest: /tmp/
+        remote_src: true
+    - name: copy file with owner and permissions
+      ansible.builtin.copy:
+        src: /tmp/wildfly-22.0.1.Final/
+        dest: /opt/wildfly
+        owner: wildfly
+        group: wildfly
+        remote_src: true
+        mode: '0777'
+    - name: changing ownership of wildfly
+      ansible.builtin.file:
+        path: /opt/wildfly
+        owner: wildfly
+        group: wildfly
+        recurse: true
+        mode: '0777'
+    - name: Create /etc/wildfly directory 
+      ansible.builtin.file:
+        path: /etc/wildfly
+        state: directory
+        mode: '0777'
+    - name: copying files to /etc/wildfly
+      ansible.builtin.copy:
+        src: /opt/wildfly/docs/contrib/scripts/systemd/wildfly.conf
+        dest: /etc/wildfly/
+        remote_src: true
+        mode: '0777'
+    - name: copying files to /opt/wildfly/bin/
+      ansible.builtin.copy:
+        src: /opt/wildfly/docs/contrib/scripts/systemd/launch.sh
+        dest: /opt/wildfly/bin/
+        remote_src: true
+        mode: '0777'
+    # - name: adding executable permissions
+    #   ansible.builtin.file:
+    #     path: /opt/wildfly/wildfly-22.0.1.Final/bin/*.sh
+    #     mode: u+rwx,g+x,o+x
+    #     state: file
+    - name: Execute the command in remote shell
+      ansible.builtin.command: sh -c 'chmod +x /opt/wildfly/wildfly-22.0.1.Final/bin/*.sh'
+    - name: copying files to /opt/wildfly/bin/
+      ansible.builtin.copy:
+        src: /opt/wildfly/docs/contrib/scripts/systemd/wildfly.service
+        dest: /etc/systemd/system/
+        remote_src: true
+        mode: '0777'
+    - name: starting wildfly service
+      ansible.builtin.systemd:
+        name: wildfly.service
+        state: started
+        enabled: yes
+    - name: restarting wildfly service
+      ansible.builtin.systemd:
+        name: wildfly.service
+        state: restarted
+        enabled: yes
