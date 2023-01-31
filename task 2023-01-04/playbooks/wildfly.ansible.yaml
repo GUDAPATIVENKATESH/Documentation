@@ -2,49 +2,57 @@
 - name: installing wildfly in ubuntu 20.04
   hosts: all
   become: yes
+  vars: 
+    wildfly_version: "22.0.1"
+    java: openjdk-11-jdk
+    group: wildfly
+    owner: wildfly
+    user: wildfly
+    home_dir: /opt/wildfly
+    shell: /sbin/nologin
   tasks: 
-    - name: installing default java
+    - name: installing java
       ansible.builtin.apt:
-        name: default-jdk
+        name: "{{ java }}"
         update_cache: true
         state: present
     - name: create a system account for wildfly group
       ansible.builtin.group:
-        name: wildfly
+        name: "{{ group }}"
         system: true
         state: present
     - name: create a system account for wildfly user
       ansible.builtin.user:
-        name: wildfly
-        group: wildfly
+        name: "{{ user }}"
+        group: "{{ group }}"
         system: true
-        home: /opt/wildfly
-        shell: /sbin/nologin
+        home: "{{ home_dir }}"
+        shell: "{{ shell }}"
         state: present
         create_home: true
     - name: download wildfly tar file
       ansible.builtin.get_url:
-        url: https://download.jboss.org/wildfly/22.0.1.Final/wildfly-22.0.1.Final.tar.gz
+        url: "https://download.jboss.org/wildfly/{{ wildfly_version }}.Final/wildfly-{{ wildfly_version }}.Final.tar.gz"
         dest: /tmp
         mode: '0440'
     - name: untaring the tar file
       ansible.builtin.unarchive:
-        src: /tmp/wildfly-22.0.1.Final.tar.gz
+        src: "/tmp/wildfly-{{ wildfly_version }}.Final.tar.gz"
         dest: /tmp/
         remote_src: true
     - name: copy file with owner and permissions
       ansible.builtin.copy:
-        src: /tmp/wildfly-22.0.1.Final/
-        dest: /opt/wildfly
-        owner: wildfly
-        group: wildfly
+        src: "/tmp/wildfly-{{ wildfly_version }}.Final/"
+        dest: "{{ home_dir }}"
+        owner: "{{ owner }}"
+        group: "{{ group }}"
         remote_src: true
         mode: '0777'
     - name: changing ownership of wildfly
       ansible.builtin.file:
-        path: /opt/wildfly
-        owner: wildfly
-        group: wildfly
+        path: "{{ home_dir }}"
+        owner: "{{ owner }}"
+        group: "{{ group }}"
         recurse: true
         mode: '0777'
     - name: Create /etc/wildfly directory 
@@ -54,26 +62,21 @@
         mode: '0777'
     - name: copying files to /etc/wildfly
       ansible.builtin.copy:
-        src: /opt/wildfly/docs/contrib/scripts/systemd/wildfly.conf
+        src: "{{  home_dir }}/docs/contrib/scripts/systemd/wildfly.conf"
         dest: /etc/wildfly/
         remote_src: true
         mode: '0777'
     - name: copying files to /opt/wildfly/bin/
       ansible.builtin.copy:
-        src: /opt/wildfly/docs/contrib/scripts/systemd/launch.sh
-        dest: /opt/wildfly/bin/
+        src: "{{ home_dir }}/docs/contrib/scripts/systemd/launch.sh"
+        dest: "{{ home_dir }}/bin/"
         remote_src: true
         mode: '0777'
-    # - name: adding executable permissions
-    #   ansible.builtin.file:
-    #     path: /opt/wildfly/wildfly-22.0.1.Final/bin/*.sh
-    #     mode: u+rwx,g+x,o+x
-    #     state: file
     - name: Execute the command in remote shell
       ansible.builtin.command: sh -c 'chmod +x /opt/wildfly/wildfly-22.0.1.Final/bin/*.sh'
     - name: copying files to /opt/wildfly/bin/
       ansible.builtin.copy:
-        src: /opt/wildfly/docs/contrib/scripts/systemd/wildfly.service
+        src: "{{ home_dir }}/docs/contrib/scripts/systemd/wildfly.service"
         dest: /etc/systemd/system/
         remote_src: true
         mode: '0777'

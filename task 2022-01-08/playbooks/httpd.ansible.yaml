@@ -1,0 +1,23 @@
+- name: install httpd in centos
+  become: yes
+  hosts: all
+  tasks:
+    - name: install httpd
+      ansible.builtin.dnf:
+        name: 
+          - httpd
+          - php
+          - php-myssqlnd
+        state: present
+    - name: enable httpd
+      ansible.builtin.systemd:
+        state: started
+        name: httpd
+        enabled: true
+    - name: copying info.php
+      ansible.builtin.copy:
+        dest: /var/www/html/info.php
+        content: '<?php 
+                    phpinfo();
+                    ?>'
+        remote_src: true

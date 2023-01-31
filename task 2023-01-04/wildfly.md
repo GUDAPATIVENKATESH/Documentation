@@ -34,10 +34,14 @@ Ansible Playbook to install Wildfly in ubuntu 20.04
 - name: installing wildfly in ubuntu 20.04
   hosts: all
   become: yes
+  vars: 
+    version: "22.0.1"
+    java: openjdk-11-jdk
+
   tasks: 
-    - name: installing default java
+    - name: installing java
       ansible.builtin.apt:
-        name: default-jdk
+        name: "{{ java }}"
         update_cache: true
         state: present
     - name: create a system account for wildfly group
