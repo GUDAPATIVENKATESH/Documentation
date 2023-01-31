@@ -9,7 +9,7 @@ pipeline {
         }
         stage('changing directory') { 
             steps {
-                sh 'cd ~/Documentation/Intergating anssible with jenkins'
+                sh 'cd ./Documentation/Intergating anssible with jenkins'
             }
         }
         stage('Deploy') { 
