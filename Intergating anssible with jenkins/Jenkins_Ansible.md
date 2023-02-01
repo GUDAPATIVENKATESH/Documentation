@@ -18,8 +18,8 @@ Installing Apache2 in with ansible playbook
 sudo apt update
 sudo apt install apache2 -y
 ```
-* for the above steps we are writing palybook [palybook](https://github.com/GUDAPATIVENKATESH/Ansible/blob/main/apache2.yml)
-* also write Jenkinsfile [Jenkinsfile](https://github.com/GUDAPATIVENKATESH/Ansible/blob/main/Jenkinsfile)
+* for the above steps we are writing [palybook](https://github.com/GUDAPATIVENKATESH/Ansible/blob/main/apache2.yml)
+* also write [Jenkinsfile](https://github.com/GUDAPATIVENKATESH/Ansible/blob/main/Jenkinsfile)
 
 * Build Pipeline
 ![PreView](JA2.png)
