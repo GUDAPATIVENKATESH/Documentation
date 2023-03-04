@@ -23,7 +23,7 @@ Elastic Block Storage
 * I have increased the volume size & attached it to server.
 * Now i want to decrease the volume size, but in AWS EBS we can only increase the volume size by modifying the size we can't decrease the volume.
 
-![PreView](storage8.png)
+ ![PreView](storage8.png)
 * If you want to decrease the volume create backup of the volume by creating the EBS snapshot & create another volume of desired size by using the snapshot.
 
 
