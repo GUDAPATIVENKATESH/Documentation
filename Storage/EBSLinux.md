@@ -1,6 +1,7 @@
 Elastic Block Storage for Linux
 -------------------------------
 
+* A Document from Azure to explain the [Volume Mount](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/add-disk?tabs=ubuntu) 
 * Create a linux machine & create EBS volume of size 1 GB.
 * Attach the EBS volume to EC2 Instance.
 * Login into ec2 incstance and the attached volumes of linux machine by executing `sudo lsblk`.
