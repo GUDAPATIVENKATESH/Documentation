@@ -23,3 +23,15 @@ Elastic Block Storage for Linux
 * `UUID=<UUID of dick> <directory to mounted> <type of file ststem>`
 * to UUID, Type of file system & any other details use `sudo blkid` .
 * `UUID=51193fe1-9590-4a6a-9764-f83b33b72a45   /venkatesh   xfs   defaults,nofail   1   2`.
+
+Modify & Resizing a Volume
+--------------------------
+* A document form AWS to help resizing the disk [ReferHere](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html)
+* After mounting the disk, we modified the volume from 1gb to 2GB.
+* To resize the `xfs` file system the command is `xfs_growfs`.
+![PreView](storage15.png)
+
+Modify & Resizing The linux Default volume 
+------------------------------------------
+* The file system in linux default volume was `ext4`, for we use `resize2fs` command.
+
