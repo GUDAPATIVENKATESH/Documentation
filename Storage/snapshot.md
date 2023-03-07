@@ -12,3 +12,12 @@ Snapshot is the backup of EBS Volume
 * In AWS after creating the snapshot we can create an AMI form that snapshot, also we can copy that snapshot to other regions also.
 
 * After creating a snapshot from EBS Volume we can delete the volume, but after creating a AMI from snapshot we can't had an choice of deleting the snapshot, also in the case of coping the snapshot to another region we are unale to delete the source snapshot.
+
+AWS Life Cycle Manager
+----------------------
+
+* By using AWS life cycle manager we can create backups for EBS Volume & AMI's.
+* The Life Cycle Manager has 3 policy types
+   1. EBS snapshot policy
+   2. EBS-backed AMI policy
+   3. Cross-account copy event policy
