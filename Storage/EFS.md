@@ -39,3 +39,7 @@ sudo mount -t efs -o tls fs-0f978619749896686:/ <folder-name>
 ```
 
 * Then any content added to folder in one linux, the same content reflect in all the other linux machines connected to the EFS File System.
+* If you want to make the EFS mount permanent you need to add the mount entries to `/etc/fstab`.
+* Here we we have done mount via DNS.
+* So the entry format would be `fs-0f978619749896686:/ <folder-name> efs _netdev,TLS 0 0`
+* After this reboot your system or enter the `sudo mount - a`. This command will apply the latest changes.
