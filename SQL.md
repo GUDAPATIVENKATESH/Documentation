@@ -24,4 +24,4 @@ DATABASE
 | FLOAT(size,d)     | A floating point number. THe total number of digits is specified in size. The number of digits after the decimal point is specified in the d parameter. |
 | Double(size,d) | A normal-size floating point number. The total number of digits is specified in size. The number of digits after the decimal point is specified in the d paramater. |
 | NUMBER(size,d) | Number can be used instead of integers and decimals |
-| DECIMAL(size,d) | Same as Number |
+| DECIMAL(size,d) | Same as NUMBER |
