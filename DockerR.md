@@ -15,4 +15,3 @@ DOCKER
 * [Day - 13](https://tinyurl.com/4sa6sc26 )
 * [Day - 14](https://tinyurl.com/3mnhat57)
 * [Day - 15](https://attendee.gotowebinar.com/register/385948804846536031)
-* [Day - 16](https://attendee.gotowebinar.com/register/6518344066931216735)
