@@ -12,3 +12,17 @@ DATABASE
     * Columns are known as fields/entity.
 ### MetaData:
     * Is data about data, it gives the information that what data is stored in a table.
+### DataTypes:
+    * Data types specify the type of data we are storing or querying.
+    * Data Types
+| Data Type  | Description |
+| ---------  | ----------- |
+| CHAR(size)      | Fixed length string, it can contain letters, numbers, and special characters. The size parameter specifies the column length of a charector.|
+| VARCHAR(size)   | Variable length string, it can contain letters, numbers, and special characters. The size parameter specifies the column length of a charector, takes less space than CHAR. |
+| INT       | It used for the integer value. Its range is from -2147483648 to 2147483648 |
+| INTEGER   | Same as INT |
+| BIGINT    | A large integer. Its range is from -9223372036854775808 to 9223372036854775808 |
+| FLOAT(size,d)     | A floating point number. THe total number of digits is specified in size. The number of digits after the decimal point is specified in the d parameter. |
+| Double(size,d) | A normal-size floating point number. The total number of digits is specified in size. The number of digits after the decimal point is specified in the d paramater. |
+| NUMBER(size,d) | Number can be used instead of integers and decimals |
+| DECIMAL(size,d) | Same as Number |
