@@ -14,7 +14,6 @@ DATABASE
     * Is data about data, it gives the information that what data is stored in a table.
 ### DataTypes:
     * Data types specify the type of data we are storing or querying.
-    * Data Types
 | Data Type  | Description |
 | ---------  | ----------- |
 | CHAR(size)      | Fixed length string, it can contain letters, numbers, and special characters. The size parameter specifies the column length of a charector.|
