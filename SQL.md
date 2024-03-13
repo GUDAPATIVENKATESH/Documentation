@@ -67,3 +67,21 @@ DATABASE
 | LIKE      | TRUE if the operand mathces a pattren | 
 | BETWEEN   | TRUE if the operand is witnin the range of comparisons |
 | EXISTS    | TRUE if the subquery returns one or more records |
+
+#### SQL Bit-wise Operators
+
+| Operator   | Description              |
+| ---------- | ------------------------ |
+| &          | Bit-wise AND             |
+| \|         | Bit-wise OR              |
+| ^          | Bit-wise Exclusive OR    |
+| ~          | Bit-wise NOT             |
+
+#### SQL set Operators
+
+| Operator   |
+| ---------- |
+| UNION      |
+| UNION ALL  |
+| INTERSECT  |
+| MINUS      |
