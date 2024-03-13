@@ -31,3 +31,39 @@ DATABASE
 | TIMESTAMP | It is used to specify the timestamp. Supported range is from '1970-01-01 00:00:01' UTC to '2038-01-09 03:14:07' UTC. | 
 | BOOLEAN   | Just to indicate True or False, 0 is False, any non-zero is True. |
 | Others    | BLOB, CLOB, BINARY, VARBINARY to store multimedia information like Images, Audio and Videos. |
+
+### Operators in SQL
+#### SQL Arthimatic Operatos
+
+| Operator  | Description    |
+| --------- | -------------- |
+| +         | Additon        |
+| -         | Subtraction    |
+| *         | Multiplication |
+| /         | Division       |
+| %         | Modulo         |
+
+#### SQL Comparison Operators
+
+| Operator  | Description              |
+| --------- | ------------------------ |
+| =         | Equal to                 |
+| >         | Grater than              |
+| <         | Less than                |
+| >=        | Greater than or equal to |
+| <=        | Less than or equal to    |
+| <> or !=  | Not equal to             |
+
+#### SQL Logical Operators
+
+| Operator  | Description              |
+| --------- | ------------------------ |
+| AND       | TRUE if all the conditions separated by AND is TRUE |
+| OR        | TRUE if any of the conditions separated by OR is TRUE |
+| NOT       | Displays a record if the conditions(s) is NOT TRUE |
+| ALL       | TRUE if all of the subquery values meet the conditions |
+| ANY       | TRUE if any of the subquery values meet the conditions |
+| IN        | TRUE if the operand is equal to one of a list of expressions |
+| LIKE      | TRUE if the operand mathces a pattren | 
+| BETWEEN   | TRUE if the operand is witnin the range of comparisons |
+| EXISTS    | TRUE if the subquery returns one or more records |
