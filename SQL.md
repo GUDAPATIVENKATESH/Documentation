@@ -25,3 +25,9 @@ DATABASE
 | Double(size,d) | A normal-size floating point number. The total number of digits is specified in size. The number of digits after the decimal point is specified in the d paramater. |
 | NUMBER(size,d) | Number can be used instead of integers and decimals |
 | DECIMAL(size,d) | Same as NUMBER (,d means number of digits after .) |
+| DATE  | It is used to specify data format YYYY-MM-DD |
+| TIME  | It is used to specify the time format. Its format is HH:MI:SS or HH24:MI:SS  |
+| DATETIME  | It is used to specify data and time combination. Its format is YYYY-MM-DD HH-MI-SS Supported range for DATETIME is '1000-01-01 00:00:00' to '9999-12-31 23:59:59' |
+| TIMESTAMP | It is used to specify the timestamp. Supported range is from '1970-01-01 00:00:01' UTC to '2038-01-09 03:14:07' UTC. | 
+| BOOLEAN   | Just to indicate True or False, 0 is False, any non-zero is True. |
+| Others    | BLOB, CLOB, BINARY, VARBINARY to store multimedia information like Images, Audio and Videos. |
