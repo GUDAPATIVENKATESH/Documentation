@@ -1,7 +1,7 @@
 MongoDB - 4.4.29 Installation in RHEL 8.8 from .rpm Binaries
 ------------------------------------------------------------
 * Follwed [MongoDB](https://www.mongodb.com/try/download/community) official site
-* Download MongoDB .rpm [server](https://repo.mongodb.org/yum/redhat/8/mongodb-org/4.4/x86_64/RPMS/mongodb-org-server-4.4.29-1.el8.x86_64.rpm) & [shell](https://repo.mongodb.org/yum/redhat/8/mongodb-org/4.4/x86_64/RPMS/mongodb-org-shell-4.4.29-1.el8.x86_64.rpm) files in `/tmp`.
+* Download MongoDB .rpm [server](https://repo.mongodb.org/yum/redhat/8/mongodb-org/4.4/x86_64/RPMS/mongodb-org-server-4.4.29-1.el8.x86_64.rpm) & [shell](https://repo.mongodb.org/yum/redhat/8/mongodb-org/4.4/x86_64/RPMS/mongodb-org-shell-4.4.29-1.el8.x86_64.rpm) also [Database-Tools](https://fastdl.mongodb.org/tools/db/mongodb-database-tools-rhel90-x86_64-100.9.4.rpm) files in `/tmp`.
 * Install .rpm packages locally with `sudo yum localinstall *.rpm`.
 * Check `mongo` and `mongod` versions
 * Check the `mongod` status with 
