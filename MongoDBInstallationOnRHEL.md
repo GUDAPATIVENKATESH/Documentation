@@ -60,3 +60,7 @@ MongoDB - 4.4.29 Installation in RHEL 8.8 from .rpm Binaries
     ```
     mongodump --db=venkatesh_db -u=venkatesh -p=1234567890 --out=/root/mongo_bkp
     ```
+* To add backed up data to `MongoDB`
+    ```
+    mongorestore --db venkatesh_db --username=venkatesh --password=1234567890 .
+    ```
