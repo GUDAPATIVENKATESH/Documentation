@@ -5,7 +5,7 @@ DOCKER
 * [Day - 03](https://tinyurl.com/ywm2ff7p )
 * [Day - 04](https://tinyurl.com/5t356dxa )
 * [Day - 05](https://tinyurl.com/58da5jtf)
-* [Day - 06](https://shorturl.at/ajQ05 )
+* [Day - 06](https://shorturl.at/ajQ05 ) Not Working
 * [Day - 07](https://tinyurl.com/4sbb77sa )
 * [Day - 08](https://tinyurl.com/3fx5bpcp)
 * [Day - 09](https://rb.gy/etbjd )
