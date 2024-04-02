@@ -67,4 +67,11 @@ MongoDB - 4.4.29 Installation in RHEL 8.8 from .rpm Binaries
 * We can add different types of formats of data to MongoDB.
 With below command we can add data in .CSV file to MongoDB database.
     ```
-    mongoimport --db venkatesh_db --username=venkatesh --password=1234567890 --collection M
+    mongoimport --db venkatesh_db --username=venkatesh --password=1234567890 --collection MyCollection --type csv --headerline --file /path/to/myfile.csv
+    ```
+* Other MongoDB Commands
+    ```
+    show dbs
+    show collections
+    db.MyCollection.find()
+    ```
