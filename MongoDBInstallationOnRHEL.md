@@ -64,3 +64,7 @@ MongoDB - 4.4.29 Installation in RHEL 8.8 from .rpm Binaries
     ```
     mongorestore --db venkatesh_db --username=venkatesh --password=1234567890 .
     ```
+* We can add different types of formats of data to MongoDB.
+With below command we can add data in .CSV file to MongoDB database.
+    ```
+    mongoimport --db venkatesh_db --username=venkatesh --password=1234567890 --collection M
