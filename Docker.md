@@ -16,3 +16,6 @@ Docker Revision
   RUN apk update && apk add openjdk8-jdk && java -version
   ```
 * Now build the docker image with `docker image build -t myjava8:1 .`
+
+#### Building a sample java project
+* For this activity I took a open source application developed on spring frame work, [Spring Pet Clinic]()
