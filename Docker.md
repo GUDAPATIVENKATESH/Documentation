@@ -37,8 +37,9 @@ Docker Revision
   ```Dockerfile
   FROM alpine:3.19
   LABEL author=venkatesh
+  ARG SAMPLE_PROJECT=https://github.com/spring-projects/spring-petclinic.git
   RUN apk update && apk add openjdk17-jdk git maven
-  RUN git clone https://github.com/spring-projects/spring-petclinic.git
+  RUN git clone ${SAMPLE_PROJECT}
   WORKDIR spring-petclinic/
   RUN mvn package
   EXPOSE 8080
