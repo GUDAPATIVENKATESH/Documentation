@@ -1,14 +1,14 @@
 # EKS CLUSTER SET-UP by VENKATESH GUDAPATI
   * Take a linux machine (t2.micro)
-  * Inatall Unzip & AWS CLI. For Official document [Refer here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+  * Inatall Unzip & [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
     ```
      sudo apt install unzip -y
      curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
      unzip awscliv2.zip
      sudo ./aws/install
     ```
-  * Create an IAM user and Configure AWS CLI Official document [Refer here](https://sst.dev/chapters/create-an-iam-user.html)
-  * Installind kubectl For Official document [Refer here](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
+  * Create an [IAM](https://sst.dev/chapters/create-an-iam-user.html) user and Configure AWS CLI
+  * Install [kubectl](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
     ```
      curl -o kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.24.7/2022-10-31/bin/linux/amd64/kubectl
 
@@ -18,10 +18,10 @@
      echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
      kubectl version --short --output=yaml
     ```  
-  * Optional: Installing EKS CTL for official document [Refer here](https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html)
+  * Optional: Installing [EKS CTL](https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html)
 
-  * here we are provisioning AWSEKS with Terraform for official document [Refer here](https://developer.hashicorp.com/terraform/tutorials/kubernetes/eks)  
-  * to set up the provisioning we need Terraform to be installed for official document [Refer here](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+  * Here we are provisioning [AWSEKS](https://developer.hashicorp.com/terraform/tutorials/kubernetes/eks)  with Terraform 
+  * To set up the EKS provisioning we need [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) to be installed
     ```
      cd ~/bin or cd /home/ubuntu/bin 
      sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
@@ -39,7 +39,7 @@
      terraform --version
 
     ```
-  * Clone Terraform EKS cluster Template for official document [Refer here](https://developer.hashicorp.com/terraform/tutorials/kubernetes/eks)
+  * Clone Terraform [EKS Cluster Template](https://developer.hashicorp.com/terraform/tutorials/kubernetes/eks)
     ```
      git clone https://github.com/hashicorp/learn-terraform-provision-eks-cluster
      cd learn-terraform-provision-eks-cluster/
