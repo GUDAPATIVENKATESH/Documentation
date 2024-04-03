@@ -15,3 +15,4 @@ Docker Revision
   LABEL author=venkatesh
   RUN apk update && apk add openjdk8-jdk && java -version
   ```
+* Now build the docker image with `docker image build -t myjava8:1 .`
