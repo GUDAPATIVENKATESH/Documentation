@@ -79,4 +79,10 @@ Docker Revision
   WORKDIR ${HOME_DIR}
   EXPOSE 8080
   ENTRYPOINT ["java", "-jar", "spring-*.jar"]
-  ``` 
+  ```
+#### Docker Volumes
+* Multiple types of [Docker Volumes](https://docs.docker.com/storage/volumes/)
+    1. Bind Mount
+    2. Volume Mount
+    3. tmpfs mount
+    * [Docker Volume Plugins](https://docs.docker.com/engine/extend/plugins_volume/)
