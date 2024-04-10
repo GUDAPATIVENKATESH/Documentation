@@ -86,3 +86,18 @@ Docker Revision
     2. Volume Mount
     3. tmpfs mount
     * [Docker Volume Plugins](https://docs.docker.com/engine/extend/plugins_volume/)
+* Creating a volume in Docker `docker create volume mydata`.
+* Create a `mysql` container and attach mydata volume to it.
+  `docker run -d -p 8080:3306 -e MYSQL_ROOT_PASSWORD=admin@123 -v mydata:/var/lib/mysql -e MYSQL_DATABASE=customers -e MYSQL_USER=seller -e MYSQL_PASSWORD=admin@123 --name mysql mysql:8.0`
+* Login into the mysql container. `docker exec -it mysql mysql -u seller -p`
+* With below commands create a table and add data into it.
+  ```sql
+  show databases;
+  use consumers;
+  CREATE TABLE customers (ID int, LastName varchar(255), FirstName varchar(255), Address varchar(255), City varchar(255));
+  show tables;
+  INSERT INTO customers (ID, LastName, FirstName, Address, City) VALUES (1, 'gudapati', 'venkatesh', 'koparkhirane', 'navimumbai');
+  select * from customers;
+  \q
+  ```
+* With this method we can persisit the data irrespective of container life time. 
