@@ -100,5 +100,5 @@ Sending notification to whatsapp from twilio with Python Flask
 
 * API for Resending OTP
     ```
-    curl -X POST -H "Content-Type: application/json" -d '{"phone_number": "+918169986162"}' http://127.0.0.1:5000/resend-otp
+    curl -X POST -H "Content-Type: application/json" -d '{"phone_number": "+91PhoneNumber"}' http://127.0.0.1:5000/resend-otp
     ```
