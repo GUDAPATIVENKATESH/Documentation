@@ -130,7 +130,6 @@ DATABASE
         ###### Syntax:
         * TRUNCATE TABLE table_name;
 
-    > Practise:
     > For practise I used docker container
         ```
         docker run -d -e MYSQL_ROOT_PASSWORD=admin@123 -v mydata:/var/lib/mysql -e MYSQL_DATABASE=customers -e MYSQL_USER=sample_user -e MYSQL_PASSWORD=admin@123 --name mysql mysql:8.0
