@@ -85,3 +85,55 @@ DATABASE
 | UNION ALL  |
 | INTERSECT  |
 | MINUS      |
+
+### Types of SQL Statements
+* There are 5 types of SQL statements
+    1. DDL - Data Definition Language
+    2. DML - Data Manupulation Language
+    3. DCL - Data Contorl Language
+    4. TCL - Transition Control Language
+    5. DQL - Data Querry Language
+
+    #### DDL
+    * Deals with the definition of database objects, these commands used to create, modify and remove the structure of the database objects like tables, views, functions etc.
+
+        * CREATE, ALTER, DROP & TRUNCATE
+
+    ##### CREATE
+    * To create objects in the database like tables, indexes, functions, views, procedures and triggers etc.
+
+        ###### Syntax: 
+        * CREATE TABLE table_name (Column1 datatype, column2 datatype ......);
+        * CREATE VIEW view_name as SELECT ... FROM tab_name;
+
+    ##### ALTER
+    * Used to alter the structure of table like adding new columns, dropping existing column, changing the length or datatype of a column and to rename the table.
+
+        ###### Syntax:
+        * ALTER TABLE table_a RENAME TO table_b;
+        * ALTER TABLE table_name ADD new_column datatype;
+        * ALTER TABLE table_name MODIFY COLUMN column_name;
+        * ALTER TABLE tavle_name DROP COLUMN column_name;
+
+    ##### DROP
+    * Used to drop database objects like tables, views, functions, procedures, indexes etc.
+
+        ###### Syntax:
+        * DROP TABLE table_name; or DROP table_name;
+        * DROP VIEW view_name;
+        * DROP FUNCTION fun_name;
+        * DROP INDEX index_name;
+
+    ##### TRUNCATE
+    * It deletes all rows from the taables and we can't rollback the deleted records.
+
+        ###### Syntax:
+        * TRUNCATE TABLE table_name;
+
+    > Practise:
+    * For practise I used docker container
+
+        ```
+        docker run -d -e MYSQL_ROOT_PASSWORD=admin@123 -v mydata:/var/lib/mysql -e MYSQL_DATABASE=customers -e MYSQL_USER=sample_user -e MYSQL_PASSWORD=admin@123 --name mysql mysql:8.0
+        docker exec -it mysql mysql -u sample_user -p
+        ``` 
