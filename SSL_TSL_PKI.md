@@ -20,7 +20,7 @@ TLS - Transport layer Security
 #### Encryption
 * Plaintext is fed into encryption algorithm along with the key. Plaintext is origin data.
 * The encryption algarithum results in encrypted data(Ciphertext).
-* Only those parties eith decryption key can decrypt the ciphertext back into it's origin palintext.
+* Only those parties with decryption key can decrypt the ciphertext back into it's origin palintext.
 
 Crytography usages:
 * Mobile device encryption
@@ -40,12 +40,12 @@ Symmetric
 
 Symmetric Encryption Algorithms
 
-|Algorithm | Maximum Key Size (Bits) |
-|----------|-------------------------|
-| AES      | 256  |
-| RC4      | 2048 |
-| 3DES     | 168  |
-| Blowfish | 448  |
+| Algorithm | Maximum Key Size (Bits) |
+|-----------|-------------------------|
+| AES       | 256  |
+| RC4       | 2048 |
+| 3DES      | 168  |
+| Blowfish  | 448  |
 
 Asymmetric
 
@@ -57,7 +57,7 @@ Asymmetric Encryption Algorithms
 |Algorithm | Maximum Key Size (Bits) |
 |----------|-------------------------|
 | RSA      | 4096 |
-| Diffie- Hellman | Not Applied |
+| Diffie-Hellman | Not Applied |
 | ElGamal    | 2048  |
 | ECC | 256 |
 
