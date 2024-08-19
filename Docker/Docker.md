@@ -58,7 +58,7 @@ Docker Revision
   ```Dockerfile
   # Multi Stage Build
   # First Stage
-  FROM maven:3.9-amazoncorretto-17 as build_one
+  FROM maven:3.9-amazoncorretto-17 AS build_one
   LABEL author=venkatesh
   ARG SAMPLE_PROJECT=https://github.com/spring-projects/spring-petclinic.git
   # ADD ${SAMPLE_PROJECT} /spring-petclinic
