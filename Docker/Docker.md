@@ -52,8 +52,8 @@ Docker Revision
 * Application deployed sucessfully.
 
 #### Building Docker Image from Multi-Stage docker image build and Running the application with Non Root User
-* In the above docker image we have done two moddifications.
-    1. Running application with Non Root Privilege user, which will restirc the application to have sudo access.
+* In the below dockerfile we have done two moddifications.
+    1. Running application with Non Root Privilege user, which will restirc the application to run on non-root privilege access.
     2. And with multistage build we can reduce the image size.
   ```Dockerfile
   # Multi Stage Build
